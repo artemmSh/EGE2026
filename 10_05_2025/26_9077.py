@@ -21,3 +21,12 @@ for i in data:
         counter_scooters += 1
         scooters[i[3]].append(i[0] + i[1])
 print(counter_scooters)
+cnt = 0
+maximum = 0
+minutes = dict()
+for i in range(10000):
+    minutes[i] = 0
+for i in data:
+    for x in range(i[0], i[0] + i[1]):
+        minutes[x] += 1
+print(max(minutes.values()))
