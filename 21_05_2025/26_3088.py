@@ -1,4 +1,4 @@
-from logging import makeLogRecord
+
 
 with open('26_3088.txt') as file:
     N = int(file.readline())
