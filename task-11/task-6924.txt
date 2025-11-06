@@ -1,0 +1,11 @@
+Python 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)] on win32
+Enter "help" below or click "Help" above for more information.
+604*1024/2048
+302.0
+2**14
+16384
+302*8/14
+172.57142857142858
+173*14/8
+302.75
+answer 172
