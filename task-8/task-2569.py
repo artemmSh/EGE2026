@@ -1,0 +1,8 @@
+from itertools import *
+
+cnt = 0
+for val in set(permutations('АМФИБРАХИЙ')):
+    val = ''.join(val)
+    if val[4:6] == 'БР':
+        cnt += 1
+print(cnt)
