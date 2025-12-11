@@ -10,3 +10,4 @@ for val in product('ПОЛИНА', repeat=8):
     if val.count('-') > val.count('+'):
         cnt += 1
 print(cnt)
+# это уже было решено я комментарий пишу чтобы загитпушить
