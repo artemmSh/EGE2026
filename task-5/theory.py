@@ -53,3 +53,23 @@ summa = sum(map(int, num))
 # Число в любой системе до 36 включительно
 R_3 = 'AF7'
 sum_3 = sum(map(lambda x: int(x, 36), R_3))
+
+ans = []
+R = 1
+# Наибольший N при наибольшем R
+ans.append([R, N])
+print(max(ans))
+
+# Наибольший N при наименьшем R
+ans.append([R, N])
+ans = sorted(ans, key=lambda x:(x[0], -x[1]))
+print(ans[0])
+
+# Наименьший N при наименьшем R
+ans.append([R, N])
+print(min(ans))
+
+# Наименьший N при наибольшем R
+ans.append([R, N])
+ans = sorted(ans, key=lambda x:(-x[0], x[1]))
+print(ans[0])

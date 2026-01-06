@@ -31,6 +31,5 @@ for x in range(-100, 100):
         goto(x * m, y * m)
         dot(10, 'white')
 
-
 update()
 done()
