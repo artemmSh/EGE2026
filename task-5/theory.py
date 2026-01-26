@@ -33,7 +33,7 @@ def convert(num):
     while num:
         res += alph[num % 3]
         num //= 3
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 # Перевод в десятичную систему
 bin_num = '101'
