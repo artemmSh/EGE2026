@@ -8,6 +8,6 @@ def div(x):
     return 0
 
 
-for N in range(int(106_732_567 ** 0.5), int(152_673_836 * 0.5)):
+for N in range(int(106_732_567 ** 0.5), int(152_673_836 ** 0.5)):
     if M := div(N ** 2):
         print(N ** 2, M)
