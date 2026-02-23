@@ -1,15 +1,12 @@
 res = set()
 
 
-def f(x, y):
-    if y == 8:
-        if x in range(1000, 1025):
-            res.add(x)
+def f(start, cnt):
+    if cnt == 8 and 1000 <= start <= 1024: res.add(start)
+    elif cnt > 8: return
     else:
-        f(x + 1, y + 1)
-        f(x + 5, y + 1)
-        f(3 * x, y + 1)
-
-
+        f(start + 1, cnt + 1)
+        f(start + 5, cnt + 1)
+        f(start * 3, cnt + 1)
 f(1, 0)
 print(len(res))

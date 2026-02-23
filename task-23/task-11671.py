@@ -1,6 +1,6 @@
-def f(x, y):
-    if y == 15: return {x}
-    return f(x + 10, y + 1) | f(x - 5, y + 1)
+def f(start, cnt=0):
+    if cnt == 15: return {start}
+    return f(start + 10, cnt + 1) | f(start - 5, cnt + 1)
 
 
-print(len(f(1, 0)))
+print(len(f(1)))

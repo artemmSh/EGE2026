@@ -1,8 +1,8 @@
-def f(x, y):
-    if x == y: return 1
-    if x > y: return 0
-    if x == 6: return f(x + 2, y) + f(x + 5, y)
-    return f(x + 2, y) + f(x + 5, y) + f(x ** 2, y)
+def f(start, end):
+    if start == end: return 1
+    if start > end: return 0
+    if start == 6: return f(start + 2, end) + f(start + 5, end)
+    return f(start + 2, end) + f(start + 5, end) + f(start ** 2, end)
 
 
 print(f(4, 36))
