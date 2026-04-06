@@ -24,7 +24,7 @@
 
 def f(data):
     res = 0
-    data.sort()
+    data = sorted(set(data))
     cnt = 0
     for i in range(len(data) - 1):
         if data[i + 1] == data[i] + 1:
