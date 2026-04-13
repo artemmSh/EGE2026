@@ -8,6 +8,6 @@ def f(ip):
 
 for A in range(256):
     net = ip_network(f'183.192.{A}.0/255.255.252.0', False)
-    if all(f(ip) for ip in net):
+    if ip_address(f'183.192.{A}.0') == net.network_address and all(f(ip) for ip in net):
         print(A)
         break
