@@ -46,11 +46,51 @@ def f(num):
             d |= {i, num // i}
 
 
-# Функция на простые числа
-
-def is_prime(x):
-    if x < 2: return False
-    for i in range(2, int(x ** 0.5) + 1):
-        if x % i == 0:
+# Проверка чисел на простоту
+def is_prime(num):
+    if num < 2: return False
+    for i in range(2, int(num ** .5) + 1):
+        if num % i == 0:
             return False
     return True
+
+
+print(is_prime(1))
+
+
+# Разложение числа на простые множители
+def fact(num):
+    d = []
+    while num % 2 == 0:
+        d += [2]
+        num //= 2
+
+    for i in range(3, int(num ** .5) + 1, 2):
+        while num % i == 0:
+            d += [i]
+            num //= i
+
+    if num > 2:
+        d += [num]
+
+    return d
+
+
+# Разложение числа на простые множители (чуть быстрее)
+def fact_3(num):
+    d = []
+    while num % 2 == 0:
+        d += [2]
+        num //= 2
+
+    i = 3
+    while i < int(num ** .5) + 1:
+        while num % i == 0:
+            d += [i]
+            num //= i
+        i += 2
+
+    if num > 2:
+        d += [num]
+
+    return d
