@@ -23,7 +23,7 @@ for id in data:
 
 sales_leader = sorted(exp, key=lambda x: (-exp[x][1:].count(0), -exp[x][0], exp[x][1:].count(1)))[0]
 
-ans1 = exp[sales_leader][0] * data[sales_leader][1:].count(0)
+ans1 = data[sales_leader][0] * data[sales_leader][1:].count(0)
 ans2 = data[sales_leader][1:].count(1)
 
 print(ans1, ans2)
